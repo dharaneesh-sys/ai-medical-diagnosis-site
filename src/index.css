@@ -42,3 +42,12 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Truth-table rows where both premises hold (todo-8) */
+.row-premises-true {
+  background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+}

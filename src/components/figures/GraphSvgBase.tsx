@@ -12,10 +12,11 @@ interface GraphSvgBaseProps {
   /** When set, edges incident to this vertex are emphasised */
   highlight?: string | null;
   width?: number;
+  onNodeSelect?: (id: string) => void;
 }
 
 /** Shared renderer: vertices as circles + subscript labels, edges as lines (todo-11). */
-export default function GraphSvgBase({ points, ariaLabel, highlight = null, width = 560 }: GraphSvgBaseProps) {
+export default function GraphSvgBase({ points, ariaLabel, highlight = null, width = 560, onNodeSelect }: GraphSvgBaseProps) {
   const byId = new Map(points.map((p) => [p.id, p]));
   return (
     <svg
@@ -43,7 +44,12 @@ export default function GraphSvgBase({ points, ariaLabel, highlight = null, widt
         );
       })}
       {points.map((p) => (
-        <g key={p.id}>
+        <g
+          key={p.id}
+          data-vertex={p.id}
+          onClick={onNodeSelect ? () => onNodeSelect(p.id) : undefined}
+          className={onNodeSelect ? 'cursor-pointer' : undefined}
+        >
           <circle cx={p.x} cy={p.y} r={30} fill={vertexColor(p.id)} stroke="#0a1816" strokeWidth={3} />
           <text
             x={p.x}

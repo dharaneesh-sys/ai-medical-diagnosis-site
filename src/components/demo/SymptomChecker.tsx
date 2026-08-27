@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { runRule } from '../../lib/ruleEngine';
 
 const chipCls = (on: boolean) =>
-  `rounded-full border px-4 py-2 font-mono text-sm transition-colors duration-200 ${
+  `rounded-full border px-4 py-2.5 min-h-11 min-w-11 font-mono text-sm transition-colors duration-200 ${
     on ? 'border-primary bg-primary/20 text-primary' : 'border-white/20 text-muted'
   }`;
 

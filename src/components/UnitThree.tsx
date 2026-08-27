@@ -65,6 +65,7 @@ export default function UnitThree() {
 
       <section>
         <h3 className="mb-3 text-lg font-semibold text-primary">Isomorphism analysis</h3>
+        <div className="overflow-x-auto">
         <table className="w-full border-collapse text-left text-sm">
           <thead>
             <tr className="bg-surface">
@@ -81,6 +82,7 @@ export default function UnitThree() {
             <tr><td className="border border-white/10 px-3 py-2">Bipartite</td><td className="border border-white/10 px-3 py-2">yes</td><td className="border border-white/10 px-3 py-2">yes</td><td className="border border-white/10 px-3 py-2">✓</td></tr>
           </tbody>
         </table>
+        </div>
         <p className="mt-2 text-sm text-muted">Degrees: S₁=2, S₂=1, S₃=1, S₄=2, D₁=3, D₂=2, D₃=1.</p>
       </section>
 

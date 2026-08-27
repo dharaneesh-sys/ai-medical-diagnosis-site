@@ -24,7 +24,7 @@ export default function App() {
   return (
     <>
       <Nav />
-      <main className="mx-auto max-w-6xl px-4">
+      <main className="mx-auto max-w-6xl px-4 overflow-x-hidden">
         <Section id="overview" kicker="Discrete Mathematics · Units I–III">
           <Hero />
         </Section>

@@ -36,7 +36,7 @@ export default function IsoExplorer() {
           aria-pressed={circular}
           data-testid="layout-toggle"
           onClick={() => setCircular((c) => !c)}
-          className="rounded-lg border border-white/20 px-3 py-1.5 text-sm transition-colors hover:border-primary hover:text-primary"
+          className="rounded-lg border border-white/20 px-4 py-2.5 min-h-11 text-sm transition-colors hover:border-primary hover:text-primary"
         >
           {circular ? 'Show bipartite layout' : 'Show circular layout'}
         </button>

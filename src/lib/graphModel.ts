@@ -14,8 +14,8 @@ export interface Vertex {
   color: string;
 }
 
-export const SYMPTOM_COLOR = '#4a90d9';
-export const DISEASE_COLOR = '#e07a5f';
+export const SYMPTOM_COLOR = 'var(--color-graph-symptom)';
+export const DISEASE_COLOR = 'var(--color-graph-disease)';
 
 export const VERTICES: Vertex[] = [
   { id: 'S1', label: 'S₁', name: 'Fever', partition: 'symptom', color: SYMPTOM_COLOR },

@@ -4,12 +4,17 @@ import Footer from './components/Footer';
 import UnitOne from './components/UnitOne';
 import UnitTwo from './components/UnitTwo';
 import UnitThree from './components/UnitThree';
+import Hero from './components/Hero';
+import SummarySection from './components/SummarySection';
+import SymptomChecker from './components/demo/SymptomChecker';
+import CombinatoricsPanel from './components/demo/CombinatoricsPanel';
+import IsoExplorer from './components/demo/IsoExplorer';
 
-function Section({ id, kicker, title, children }: { id: string; kicker?: string; title: string; children: ReactNode }) {
+function Section({ id, kicker, title, children }: { id: string; kicker?: string; title?: string; children: ReactNode }) {
   return (
     <section id={id} className="scroll-mt-20 py-10">
       {kicker && <p className="text-xs uppercase tracking-wide text-muted">{kicker}</p>}
-      <h2 className="mb-6 text-2xl font-bold">{title}</h2>
+      {title && <h2 className="mb-6 text-2xl font-bold">{title}</h2>}
       {children}
     </section>
   );
@@ -20,12 +25,8 @@ export default function App() {
     <>
       <Nav />
       <main className="mx-auto max-w-6xl px-4">
-        <Section id="overview" kicker="Discrete Mathematics · Units I–III" title="AI-Based Medical Diagnosis">
-          <p className="max-w-3xl">
-            How propositional logic, combinatorics and graph theory power a symptom-based diagnosis
-            assistant — proved in Unit I, counted in Unit II and mapped in Unit III, then made runnable
-            in the Live Demo.
-          </p>
+        <Section id="overview" kicker="Discrete Mathematics · Units I–III">
+          <Hero />
         </Section>
         <Section id="unit-1" kicker="Hypothetical Syllogism" title="Unit I — Logic and Proofs">
           <UnitOne />
@@ -37,10 +38,24 @@ export default function App() {
           <UnitThree />
         </Section>
         <Section id="demo" kicker="Interactive" title="Live Demo">
-          <p className="text-muted">Symptom checker, combinatorics calculator and isomorphism explorer arrive with Wave 4.</p>
+          <div className="grid gap-6">
+            <SymptomChecker />
+            <CombinatoricsPanel />
+            <IsoExplorer />
+          </div>
         </Section>
         <Section id="report" title="Report">
-          <p className="text-muted">The downloadable report (docx) will be linked here.</p>
+          <SummarySection />
+          <p className="mt-6">
+            <a
+              href="/GROUP4_AI_Medical_Diagnosis_Solutions.docx"
+              download
+              data-testid="report-download"
+              className="inline-block rounded-lg bg-primary px-4 py-2 font-semibold text-[#06231c] transition-opacity hover:opacity-90"
+            >
+              Download full report (docx)
+            </a>
+          </p>
         </Section>
       </main>
       <Footer />

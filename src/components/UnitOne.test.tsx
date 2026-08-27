@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { cleanup, getAllByText, render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 
 afterEach(cleanup);
 import UnitOne from './UnitOne';

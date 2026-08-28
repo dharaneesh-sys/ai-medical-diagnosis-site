@@ -9,6 +9,7 @@ import SummarySection from './components/SummarySection';
 import SymptomChecker from './components/demo/SymptomChecker';
 import CombinatoricsPanel from './components/demo/CombinatoricsPanel';
 import IsoExplorer from './components/demo/IsoExplorer';
+import Showcase from './components/showcase/Showcase';
 
 function Section({ id, kicker, title, children }: { id: string; kicker?: string; title?: string; children: ReactNode }) {
   return (
@@ -21,6 +22,9 @@ function Section({ id, kicker, title, children }: { id: string; kicker?: string;
 }
 
 export default function App() {
+  if (typeof window !== 'undefined' && window.location.pathname === '/showcase') {
+    return <Showcase />;
+  }
   return (
     <>
       <Nav />

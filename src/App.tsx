@@ -54,17 +54,44 @@ export default function App() {
             </div>
           </div>
         </Section>
-        <Section id="report" title="Report">
+        <Section id="report" title="Reports — Download">
           <SummarySection />
-          <p className="mt-6">
-            <a
-              href="/GROUP4_AI_Medical_Diagnosis_Solutions.docx"
-              download
-              data-testid="report-download"
-              className="inline-block rounded-lg bg-primary px-4 py-2 font-semibold text-[#06231c] transition-opacity hover:opacity-90"
-            >
-              Download full report (docx)
-            </a>
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-lg border border-white/10 bg-surface p-4">
+              <h3 className="font-semibold">Full R&D Report</h3>
+              <p className="mt-1 text-xs text-muted">12 sections, 5–7 pages</p>
+              <div className="mt-3 flex gap-2">
+                <a href="/GROUP4_RnD_Report.docx" download data-testid="report-full-docx" className="rounded bg-primary px-3 py-1.5 text-xs font-semibold text-[var(--color-bg)]">DOCX</a>
+                <a href="/GROUP4_RnD_Report.pdf" download data-testid="report-full-pdf" className="rounded border border-white/20 px-3 py-1.5 text-xs font-semibold hover:border-primary hover:text-primary">PDF</a>
+              </div>
+            </div>
+            <div className="rounded-lg border border-white/10 bg-surface p-4">
+              <h3 className="font-semibold">Unit I — Logic</h3>
+              <p className="mt-1 text-xs text-muted">Proof & truth table</p>
+              <div className="mt-3 flex gap-2">
+                <a href="/GROUP4_Unit1_Logic_Report.docx" download data-testid="report-unit1-docx" className="rounded bg-primary px-3 py-1.5 text-xs font-semibold text-[var(--color-bg)]">DOCX</a>
+                <a href="/GROUP4_Unit1_Logic_Report.pdf" download data-testid="report-unit1-pdf" className="rounded border border-white/20 px-3 py-1.5 text-xs font-semibold hover:border-primary hover:text-primary">PDF</a>
+              </div>
+            </div>
+            <div className="rounded-lg border border-white/10 bg-surface p-4">
+              <h3 className="font-semibold">Unit II — Combinatorics</h3>
+              <p className="mt-1 text-xs text-muted">Counts & formulas</p>
+              <div className="mt-3 flex gap-2">
+                <a href="/GROUP4_Unit2_Combinatorics_Report.docx" download data-testid="report-unit2-docx" className="rounded bg-primary px-3 py-1.5 text-xs font-semibold text-[var(--color-bg)]">DOCX</a>
+                <a href="/GROUP4_Unit2_Combinatorics_Report.pdf" download data-testid="report-unit2-pdf" className="rounded border border-white/20 px-3 py-1.5 text-xs font-semibold hover:border-primary hover:text-primary">PDF</a>
+              </div>
+            </div>
+            <div className="rounded-lg border border-white/10 bg-surface p-4">
+              <h3 className="font-semibold">Unit III — Graphs</h3>
+              <p className="mt-1 text-xs text-muted">Bipartite & isomorphism</p>
+              <div className="mt-3 flex gap-2">
+                <a href="/GROUP4_Unit3_Graphs_Report.docx" download data-testid="report-unit3-docx" className="rounded bg-primary px-3 py-1.5 text-xs font-semibold text-[var(--color-bg)]">DOCX</a>
+                <a href="/GROUP4_Unit3_Graphs_Report.pdf" download data-testid="report-unit3-pdf" className="rounded border border-white/20 px-3 py-1.5 text-xs font-semibold hover:border-primary hover:text-primary">PDF</a>
+              </div>
+            </div>
+          </div>
+          <p className="mt-6 text-center text-xs text-muted">
+            Legacy full report also at <a href="/GROUP4_AI_Medical_Diagnosis_Solutions.docx" download data-testid="report-download" className="underline hover:text-primary">GROUP4_AI_Medical_Diagnosis_Solutions.docx</a>
           </p>
         </Section>
       </main>

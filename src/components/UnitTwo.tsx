@@ -13,9 +13,12 @@ const COUNTS = {
 export default function UnitTwo() {
   return (
     <div className="space-y-8">
-      <section className="grid gap-4 md:grid-cols-3">
-        {combinatoricsCases.map((c) => (
-          <div key={c.key} className="rounded-lg border border-white/10 bg-surface p-4">
+      <section className="grid gap-4 md:grid-cols-12">
+        {combinatoricsCases.map((c, i) => (
+          <div
+            key={c.key}
+            className={`rounded-lg border border-white/10 bg-surface p-4 ${i === 0 ? 'md:col-span-7' : i === 1 ? 'md:col-span-5' : 'md:col-span-12'}`}
+          >
             <div className="mb-1 text-xs uppercase tracking-wide text-muted">{c.title}</div>
             <div className="font-mono text-sm">{c.formula}</div>
             <output

@@ -33,9 +33,14 @@ export default function UnitOne() {
         </table>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-3">
-        {[premises.p1, premises.p2, premises.conclusion].map((item, i) => (
-          <div key={item.expr} className={`rounded-lg border p-4 ${i < 2 ? 'border-white/10 bg-surface' : 'border-primary/40 bg-surface'}`}>
+      <section className="grid gap-4 md:grid-cols-2">
+        {[premises.p1, premises.p2, premises.conclusion].map((item, i) => {
+          const isConclusion = i === 2;
+          return (
+            <div
+              key={item.expr}
+              className={`rounded-lg border p-4 ${isConclusion ? 'md:col-span-2 border-primary/40 bg-surface' : 'border-white/10 bg-surface'}`}
+            >
             <div className="mb-1 text-xs uppercase tracking-wide text-muted">
               {i === 0 ? 'Premise 1' : i === 1 ? 'Premise 2' : 'Conclusion'}
             </div>

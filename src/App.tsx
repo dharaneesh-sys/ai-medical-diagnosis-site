@@ -42,10 +42,16 @@ export default function App() {
           <UnitThree />
         </Section>
         <Section id="demo" kicker="Interactive" title="Live Demo">
-          <div className="grid gap-6">
-            <SymptomChecker />
-            <CombinatoricsPanel />
-            <IsoExplorer />
+          <div className="grid gap-6 md:grid-cols-12">
+            <div className="md:col-span-12">
+              <SymptomChecker />
+            </div>
+            <div className="md:col-span-5">
+              <CombinatoricsPanel />
+            </div>
+            <div className="md:col-span-7">
+              <IsoExplorer />
+            </div>
           </div>
         </Section>
         <Section id="report" title="Report">

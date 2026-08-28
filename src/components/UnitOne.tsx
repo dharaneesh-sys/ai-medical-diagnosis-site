@@ -41,13 +41,14 @@ export default function UnitOne() {
               key={item.expr}
               className={`rounded-lg border p-4 ${isConclusion ? 'md:col-span-2 border-primary/40 bg-surface' : 'border-white/10 bg-surface'}`}
             >
-            <div className="mb-1 text-xs uppercase tracking-wide text-muted">
-              {i === 0 ? 'Premise 1' : i === 1 ? 'Premise 2' : 'Conclusion'}
+              <div className="mb-1 text-xs uppercase tracking-wide text-muted">
+                {i === 0 ? 'Premise 1' : i === 1 ? 'Premise 2' : 'Conclusion'}
+              </div>
+              <div className="font-mono text-primary">{item.expr}</div>
+              <div className="mt-2 text-sm text-muted">{item.meaning}</div>
             </div>
-            <div className="font-mono text-primary">{item.expr}</div>
-            <div className="mt-2 text-sm text-muted">{item.meaning}</div>
-          </div>
-        ))}
+          );
+        })}
       </section>
 
       <section>
